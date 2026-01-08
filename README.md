@@ -2,83 +2,94 @@
 
 ## ⚠️ KRYTYCZNE - ENVIRONMENT VARIABLES
 
-**JEDYNY PRAWIDŁOWY PLIK:** `POTRZEBNY_22_PANELI_FINAL.txt`
-- **Lokalizacja:** `~/Downloads/POTRZEBNY_22_PANELI_FINAL.txt`
-- **Liczba linii:** dokładnie **20,310**
-- **Format:** KEY=value (zwalidowany, bez błędów)
+### 🎯 NOWE PLIKI Z PRAWDZIWYMI KLUCZAMI (8 Stycznia 2026)
 
-### ❌ NIE UŻYWAJ INNYCH PLIKÓW!
-Wszystkie inne wersje są nieprawidłowe:
-- ~~potrzebny_ULTIMATE_22_panels.env.local~~ (18,515 linii - ZŁY!)
-- ~~potrzebny_22_FIXED_FINAL.txt~~ (18,599 linii - ZŁY!)
-- ~~potrzebny_22_CLEAN.env.local~~ (18,515 linii - ZŁY!)
+**Lokalizacja:** `~/Desktop/RZECZYWISTE ZMIENNE/`
+
+| Plik | Opis | Linie |
+|------|------|-------|
+| `POTRZEBNY_22_PANELI_PRAWDZIWE_KLUCZE.env.local` | **PRIORYTETOWY** - strukturalny z 22 panelami | 641 |
+| `POTRZEBNY_FINAL_WSZYSTKIE_ZMIENNE.env.local` | **KOMPLETNY** - wszystkie zmienne | 5,170 |
+
+### ✅ BACKUP NA PULPICIE
+
+| Plik | Opis |
+|------|------|
+| `POTRZEBNY_22_PANELI_PRIORYTETOWE_641.env.local` | Backup priorytetowego |
+| `POTRZEBNY_FINAL_KOMPLETNY_5170.env.local` | Backup kompletnego |
+
+### ❌ STARE PLIKI - NIE UŻYWAĆ!
+- ~~POTRZEBNY_22_PANELI_FINAL.txt~~ (20,310 linii - PLACEHOLDERY!)
+- ~~potrzebny_ULTIMATE_22_panels.env.local~~ (PLACEHOLDERY!)
+
+---
+
+## ✅ PRAWDZIWE KLUCZE API ZAWARTE
+
+| Serwis | Status |
+|--------|--------|
+| Anthropic/Claude | ✅ `sk-ant-api03-...` |
+| OpenAI | ✅ `sk-proj-...` |
+| DeepSeek | ✅ `sk-84e595f0...` |
+| Perplexity | ✅ `pplx-0HTKuvq9...` |
+| Stripe Live | ✅ `sk_live_51SZcxe...` |
+| Supabase | ✅ `klboejvukyywtpiopevn` |
+| Upstash Redis | ✅ Skonfigurowany |
+| GitHub | ✅ PAT token |
+| Vercel | ✅ Full access |
+| Sentry | ✅ Auth token |
+| InFakt | ✅ API key |
+| 1Password | ✅ Connect token |
 
 ---
 
 ## 🚀 QUICK START
 
-### Krok 1: Przygotuj środowisko
+### Krok 1: Użyj NOWEGO pliku
 ```bash
-cp ~/Downloads/POTRZEBNY_22_PANELI_FINAL.txt .env.local
+cp ~/Desktop/POTRZEBNY_FINAL_KOMPLETNY_5170.env.local .env.local
 ```
 
-### Krok 2: Zweryfikuj (WAŻNE!)
+### Krok 2: Zweryfikuj
 ```bash
 wc -l .env.local
-# Powinno pokazać: 20310 .env.local
+# Powinno pokazać: 5170
 ```
 
-### Krok 3: Uruchom pre-launch checklist
+### Krok 3: Sprawdź prawdziwe klucze
 ```bash
-npx tsx scripts/pre-launch-checklist.ts
+grep "sk_live_51SZcxe" .env.local
+grep "sk-ant-api03" .env.local
 ```
-
-### Krok 4: Deploy!
-```bash
-bash scripts/launch.sh
-```
-
----
-
-## 📱 Claude Desktop App - Environment Variables
-
-Jeśli używasz Claude Desktop App:
-
-1. Otwórz `~/Downloads/POTRZEBNY_22_PANELI_FINAL.txt` w TextEdit
-2. Cmd+A (zaznacz wszystko) → Cmd+C (kopiuj)
-3. W Claude Desktop App → wybierz repo → kliknij ikonę ustawień
-4. Wklej CAŁĄ zawartość do "Environment variables"
-5. Network access: **Full**
-6. Save changes
 
 ---
 
 ## 📋 22 Panele
 
-| ID | Panel | Cena |
-|----|-------|------|
-| P1 | Nauczyciel | 0 PLN |
-| P2 | Wykładowca | 0 PLN |
-| P3 | Terapeuta | 49 PLN |
-| P4 | Lekarz | 49 PLN |
-| P5 | Terapeuta Szkolący | 49 PLN |
-| P6 | Admin Personalizacja | 49 PLN |
-| P7 | Rodzic | 29 PLN |
-| P8 | Super Admin | 0 PLN |
-| P9 | Asystent Comet | 29 PLN |
-| P10 | Student | 0 PLN |
-| P11 | Student Akademicki | 29 PLN |
-| P12 | Pacjent | 0 PLN |
-| P13 | Student Medyczny | 29 PLN |
-| P14 | Personalizacja Treningu | 49 PLN |
-| P15 | Supermózg | 79 PLN |
-| P16 | Supermózg Ultra | 699 PLN |
-| P17 | Research Premium | 799 PLN |
-| P18 | Ćwiczenia Terapeutyczne | 49 PLN |
-| P19 | Telebim LED | 49 PLN |
-| P20 | Psychomedic | 79 PLN |
-| P21 | Infrastruktura | 0 PLN |
-| P22 | Geminifikacja | 79 PLN |
+| ID | Panel | Cena | Model AI |
+|----|-------|------|----------|
+| P01 | Nauczyciel | 0 PLN | claude-3-5-haiku |
+| P02 | Wykładowca | 0 PLN | claude-3-5-sonnet |
+| P03 | Terapeuta | 49 PLN | claude-3-5-sonnet |
+| P04 | Lekarz Szkolący | 49 PLN | claude-3-5-sonnet |
+| P05 | Terapeuta Szkolący | 49 PLN | claude-3-5-sonnet |
+| P06 | Admin Personalizacja | 49 PLN | deepseek-chat |
+| P07 | Rodzic | 29 PLN | claude-3-5-haiku |
+| P08 | Super Admin | 0 PLN | claude-3-5-sonnet |
+| P09 | Asystent Comet | 29 PLN | perplexity-sonar |
+| P10 | Uczeń | 0 PLN | deepseek-chat |
+| P11 | Student Akademicki | 29 PLN | claude-3-5-sonnet |
+| P12 | Pacjent | 0 PLN | claude-3-5-haiku |
+| P13 | Student Medyczny | 29 PLN | claude-3-5-sonnet |
+| P14 | Szkoleniowy Custom | 49 PLN | claude-3-5-sonnet |
+| P15 | Supermózg | 79 PLN | claude-3-5-sonnet |
+| P16 | Supermózg ULTRA | 699 PLN | claude-opus |
+| P17 | Research Premium | 799 PLN | claude-opus |
+| P18 | Ćwiczenia Terapeutyczne | 49 PLN | claude-3-5-sonnet |
+| P19 | Telebim LED 8K | 49 PLN | deepseek-chat |
+| P20 | Psychomedic | 79 PLN | claude-3-5-sonnet |
+| P21 | Infrastruktura | 0 PLN | - |
+| P22 | Geminifikacja | 79 PLN | gemini-2.0-flash |
 
 ---
 
@@ -94,5 +105,5 @@ Jeśli używasz Claude Desktop App:
 
 1. **TYLKO Stripe** dla płatności (BLIK przez Stripe)
 2. **NIE używaj Przelewy24** - nie mamy tego!
-3. **Zawsze weryfikuj** liczbę linii: `wc -l .env.local` = 20310
+3. **Używaj NOWYCH plików** z prawdziwymi kluczami
 4. **Claude Code DEFAULT FULL ACCESS** - nie pytaj o potwierdzenia
